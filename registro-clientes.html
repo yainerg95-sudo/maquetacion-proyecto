@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/registro.css">
+</head>
+<body>
+        <header class="header">
+        <h1>Transportando Sonrisas</h1>
+    </header>
+
+    <div class="layout-grid">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="ingresar.html">Ingresar</a></li>
+                <li><a href="registrarse.html">Registrarse</a></li>
+                <li><a href="registro_clientes.html">Registro Clientes</a></li>
+                <li><a href="facturacion.html">Facturación</a></li>
+            </ul>
+        </aside>
+    <h1>Gestión de Clientes</h1>
+
+    <!-- Registrar Cliente -->
+    <h2>Registrar Cliente</h2>
+    <form action="registrar_cliente.php" method="POST">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="email">Correo:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="telefono">Teléfono:</label><br>
+        <input type="text" id="telefono" name="telefono" required><br><br>
+
+        <button type="submit">Registrar</button>
+    </form>
+
+    <hr>
+
+    <!-- Eliminar Cliente -->
+    <h2>Eliminar Cliente</h2>
+    <form action="eliminar_cliente.php" method="POST">
+        <label for="id_eliminar">ID del Cliente:</label><br>
+        <input type="number" id="id_eliminar" name="id_cliente" required><br><br>
+
+        <button type="submit">Eliminar</button>
+    </form>
+
+    <hr>
+
+    <!-- Buscar Cliente -->
+    <h2>Buscar Cliente</h2>
+    <form action="buscar_cliente.php" method="GET">
+        <label for="buscar">Nombre o ID:</label><br>
+        <input type="text" id="buscar" name="busqueda" required><br><br>
+
+        <button type="submit">Buscar</button>
+    </form>
+</body>
+</html>

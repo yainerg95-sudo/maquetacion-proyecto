@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transportando sonrisas </title>
+    <link rel="stylesheet" href="css/seguimiento.css">
+</head>
+<body>
+
+        <header class="header">
+        <h1>Transportando Sonrisas</h1>
+    </header>
+
+    <div class="layout-grid">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="ingresar.html">Ingresar</a></li>
+                <li><a href="registrarse.html">Registrarse</a></li>
+                <li><a href="registro_clientes.html">Registro Clientes</a></li>
+                <li><a href="facturacion.html">Facturación</a></li>
+            </ul>
+        </aside>
+    <h1>Seguimiento de Paquete</h1>
+
+    <form action="consultar_paquete.php" method="GET">
+
+        <label for="numero_guia">Número de Guía / Rastreo:</label><br>
+        <input type="text" id="numero_guia" name="numero_guia" required><br><br>
+
+        <label for="correo">Correo Electrónico:</label><br>
+        <input type="email" id="correo" name="correo"><br><br>
+
+        <button type="submit">Consultar Estado</button>
+
+    </form>
+</body>
+</html>

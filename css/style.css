@@ -1,0 +1,137 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f9; /* mismo fondo que la otra página */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* HEADER */
+.header{
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, #1e3a8a, #0f172a);
+    color: white;
+    padding: 25px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 22px;
+}
+
+/* LOGO */
+.logo-pequeno{
+    width: 220px;
+    height: auto;
+    max-width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.logo-pequeno:hover{
+    transform: scale(1.05);
+}
+
+/* GRID PRINCIPAL */
+.layout-grid{
+    display: grid;
+    grid-template-columns: 250px 1fr 1fr;
+    gap: 25px;
+    padding: 30px;
+    min-height: 100vh;
+    grid-template-areas: 
+    "sidebar contenido1 contenido1"
+    "sidebar contenido2 contenido3"
+    "footer footer footer";
+}
+
+/* SIDEBAR */
+.sidebar{
+    grid-area: sidebar;
+    background: #1e293b; /* mismo azul oscuro */
+    padding: 25px 15px;
+    border-radius: 10px;
+}
+
+.sidebar ul{
+    list-style: none;
+}
+
+.sidebar ul li{
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a{
+    text-decoration: none;
+    color: #e2e8f0;
+    display: block;
+    padding: 12px 15px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover{
+    background: #2563eb;
+    padding-left: 25px;
+}
+
+/* CONTENIDOS */
+.contenido1,
+.contenido2,
+.contenido3{
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.contenido1:hover,
+.contenido2:hover,
+.contenido3:hover{
+    transform: translateY(-5px);
+}
+
+/* AREAS */
+.contenido1{ grid-area: contenido1; }
+.contenido2{ grid-area: contenido2; }
+.contenido3{ grid-area: contenido3; }
+
+/* FOOTER */
+.footer{
+    grid-area: footer;
+    background: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* CORREO */
+.correo{
+    text-decoration: none;
+    color: #38bdf8;
+    transition: 0.3s;
+}
+
+.correo:hover{
+    color: #0ea5e9;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px){
+    .layout-grid{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "sidebar"
+        "contenido1"
+        "contenido2"
+        "contenido3"
+        "footer";
+    }
+}
